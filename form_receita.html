@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Receita</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.133);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input {
+            margin: 0.5em auto 20px;
+            border-radius: 10px;
+            height: 2.5vh;
+        }
+
+        #fotodoprato {
+            border-radius: 0;
+            height: 3vh;
+            margin-bottom: -1px;
+        }
+
+        .field {
+            margin-bottom: 10px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .primeiro {
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            border-top-color: #0000ff;
+            border-top-width: 3.5vw;
+            margin-top: 3vh;
+        }
+
+        .ultimo {
+            border-bottom-left-radius: 5%;
+            border-bottom-right-radius: 5%;
+            margin-bottom: 3vh;
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .centralizador {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        textarea {
+            margin-bottom: 20px;
+        }
+
+        .input {
+            width: 40%;
+        }
+
+        .style-h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        nome da receita
+        foto do prato
+        ingredientes
+        modo de preparo
+    -->
+
+    <div for="Formulário" class="centralizador">
+        <form action="https://formsubmit.co/eduardo.carvalho1@escolar.ifrn.edu.br" method="post" id="Formulário">
+
+            <div class="linha-cima"></div>
+            <fieldset class="field primeiro">
+                <h1 class="style-h1">Divulgue sua receita</h1>
+                <hr>
+                <label for="nome">Qual o seu nome?</label><br>
+                <input type="text" id="nome" placeholder="Nome completo" required><br>
+                <label for="local">De onde você é?</label><br>
+                <input type="text" id="local" placeholder="sua cidade/estado" required><br>
+                <label for="email">Coloque seu E-mail</label><br>
+                <input type="email" id="email" placeholder="E-mail" required>
+            </fieldset>
+            <fieldset class="field ultimo">
+                <h2>Coloque sua Receita</h2>
+                <hr>
+                <label for="nomedareceita">Nome do prato</label><br>
+                <input type="text" id="nomedareceita" placeholder="Nome do Prato"><br>
+                <label for="fotodoprato">Foto do prato</label><br>
+                <fieldset class="input">
+                    <input type="file" id="fotodoprato">
+                </fieldset><br>
+                <label for="ingredientes">Ingredientes</label><br>
+                <textarea name="ingredientes" id="ingredientes" placeholder="Ingredientes..."></textarea>
+                <br>
+                <label for="mododepreparo">Modo de Preparo</label><br>
+                <textarea name="mododepreparo" id="mododepreparo" placeholder="Modo de preparo..."></textarea>
+                <br>
+                <input type="submit" class="btn compartilhar"></input>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
